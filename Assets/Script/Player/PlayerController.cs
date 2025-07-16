@@ -5,10 +5,11 @@ public class PlayerController : MonoBehaviour
     [Header("References")]
     [SerializeField] private Rigidbody _rigidBody;
     [SerializeField] private Transform _model;
+    [SerializeField] private Transform _camera;
 
     [Header("Movement Settings")]
     [SerializeField] private float _moveSpeed = 5f;
-    [SerializeField] private float _turnSpeed = 720f; // degrees per second
+    [SerializeField] private float _turnSpeed = 720f;
 
     private Vector3 _input;
 
@@ -34,7 +35,15 @@ public class PlayerController : MonoBehaviour
     {
         if (_input == Vector3.zero) return;
 
-        Vector3 moveDirection = _input.ToIso();
+        // Get camera directions
+        Vector3 camForward = _camera.forward;
+        Vector3 camRight = _camera.right;
+        camForward.y = 0;
+        camRight.y = 0;
+        camForward.Normalize();
+        camRight.Normalize();
+
+        Vector3 moveDirection = camForward * _input.z + camRight * _input.x;
         Vector3 targetPosition = _rigidBody.position + moveDirection * _moveSpeed * Time.fixedDeltaTime;
         _rigidBody.MovePosition(targetPosition);
     }
@@ -43,7 +52,16 @@ public class PlayerController : MonoBehaviour
     {
         if (_input == Vector3.zero) return;
 
-        Quaternion targetRotation = Quaternion.LookRotation(_input.ToIso(), Vector3.up);
+        Vector3 camForward = _camera.forward;
+        Vector3 camRight = _camera.right;
+        camForward.y = 0;
+        camRight.y = 0;
+        camForward.Normalize();
+        camRight.Normalize();
+
+        Vector3 moveDirection = camForward * _input.z + camRight * _input.x;
+
+        Quaternion targetRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
         _model.rotation = Quaternion.RotateTowards(_model.rotation, targetRotation, _turnSpeed * Time.deltaTime);
     }
 }
