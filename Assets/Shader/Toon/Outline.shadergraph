@@ -358,7 +358,7 @@
     "m_AlphaMode": 0,
     "m_RenderFace": 1,
     "m_AlphaClip": false,
-    "m_CastShadows": true,
+    "m_CastShadows": false,
     "m_ReceiveShadows": true,
     "m_DisableTint": false,
     "m_AdditionalMotionVectorMode": 0,
@@ -739,9 +739,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -648.1530151367188,
-            "y": 87.84698486328125,
-            "width": 207.99998474121095,
+            "x": -764.0001220703125,
+            "y": 80.00001525878906,
+            "width": 208.0001220703125,
             "height": 312.79998779296877
         }
     },
@@ -782,9 +782,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -284.1529541015625,
-            "y": -20.952964782714845,
-            "width": 207.99998474121095,
+            "x": -440.0000305175781,
+            "y": -32.000003814697269,
+            "width": 207.99996948242188,
             "height": 301.5999755859375
         }
     },
@@ -859,10 +859,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -399.9999084472656,
-            "y": -33.599971771240237,
-            "width": 97.5999755859375,
-            "height": 33.59999084472656
+            "x": -556.0,
+            "y": -44.79998016357422,
+            "width": 97.59991455078125,
+            "height": 33.5999870300293
         }
     },
     "m_Slots": [

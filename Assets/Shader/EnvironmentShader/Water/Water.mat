@@ -24,19 +24,39 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: fce1497e4e50cbf43b3831f6820d204d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _ALPHAPREMULTIPLY_ON
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses:
   - MOTIONVECTORS
+  - DepthOnly
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Texture2DAsset_54f04e06b8b74551aa62d318d63e7cdd_Out_0_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_7008848b97164861b6317af3d33ae7b2_Out_0_Texture2D:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureNormal:
+        m_Texture: {fileID: 2800000, guid: 91cb6470d31cda64e999e94c3e8b267f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureNormal_1:
+        m_Texture: {fileID: 2800000, guid: 7ef7a3a5ad396e542af473574dede772, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -51,20 +71,35 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FoamAmount: 0.4
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 1
+    - _CastShadows: 1
+    - _Cull: 2
+    - _Distance: 0
+    - _DstBlend: 10
+    - _FoamAmount: 0.65
     - _FoamCutOff: 1.18
     - _FoamScale: 30
-    - _FoamSpeed: 0.1
+    - _FoamSpeed: 0.05
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _ReceiveShadows: 1
     - _RippleDensity: 9.1
     - _RippleSlimness: 7.65
-    - _RippleSpeed: 2
-    - _WaveScale: 0.3
+    - _RippleSpeed: 1
+    - _SrcBlend: 1
+    - _Surface: 1
+    - _WaveScale: 0.2
     - _WaveSpeed: 1
+    - _WorkflowMode: 1
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _ZWriteControl: 0
     m_Colors:
-    - _BaseColor: {r: 0.45054454, g: 0.6888541, b: 0.8943396, a: 1}
-    - _FoamColor: {r: 2.670157, g: 2.670157, b: 2.670157, a: 1}
-    - _RippleColor: {r: 0.7056603, g: 1.34105, b: 2, a: 1}
+    - _BaseColor: {r: 0.23339976, g: 0.7401579, b: 0.8415094, a: 1}
+    - _FoamColor: {r: 3.0805855, g: 3.0805855, b: 3.0805855, a: 1}
+    - _RippleColor: {r: 0.97735846, g: 1.4982334, b: 2, a: 0.6666667}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
