@@ -79,8 +79,8 @@ Material:
     - _Cull: 2
     - _Distance: 0
     - _DstBlend: 10
-    - _FoamAmount: 0.65
-    - _FoamCutOff: 1.18
+    - _FoamAmount: 1
+    - _FoamCutOff: 2.29
     - _FoamScale: 30
     - _FoamSpeed: 0.05
     - _QueueControl: 0
@@ -99,7 +99,7 @@ Material:
     - _ZWriteControl: 0
     m_Colors:
     - _BaseColor: {r: 0.23339976, g: 0.7401579, b: 0.8415094, a: 1}
-    - _FoamColor: {r: 3.0805855, g: 3.0805855, b: 3.0805855, a: 1}
+    - _FoamColor: {r: 4.1128235, g: 4.1128235, b: 4.1128235, a: 1}
     - _RippleColor: {r: 0.97735846, g: 1.4982334, b: 2, a: 0.6666667}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
