@@ -1209,13 +1209,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291093439}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.744, y: 0.951, z: -0.896}
+  m_LocalRotation: {x: -0, y: 0.6417145, z: -0, w: 0.76694363}
+  m_LocalPosition: {x: 15.744, y: 0.951, z: -0.8960011}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 165658865}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 79.84, z: 0}
 --- !u!135 &291093441
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6277,7 +6277,39 @@ MonoBehaviour:
   m_LightCookieSize: {x: 100, y: 100}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
---- !u!84 &457627716
+--- !u!1 &465861403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 465861404}
+  m_Layer: 0
+  m_Name: Lights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &465861404
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465861403}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.944511, y: -9.212806, z: -0.99525994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 410087041}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!84 &481785376
 RenderTexture:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6314,38 +6346,6 @@ RenderTexture:
   m_Dimension: 2
   m_VolumeDepth: 1
   m_ShadowSamplingMode: 2
---- !u!1 &465861403
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 465861404}
-  m_Layer: 0
-  m_Name: Lights
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &465861404
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465861403}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.944511, y: -9.212806, z: -0.99525994}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 410087041}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &539620042
 GameObject:
   m_ObjectHideFlags: 0
@@ -20697,6 +20697,8 @@ GameObject:
   - component: {fileID: 9205371886284785306}
   - component: {fileID: 6298985931167099897}
   - component: {fileID: 4103191127634926373}
+  - component: {fileID: 9205371886284785307}
+  - component: {fileID: 9205371886284785308}
   m_Layer: 0
   m_Name: PixelCamera
   m_TagString: MainCamera
@@ -21640,8 +21642,6 @@ GameObject:
   - component: {fileID: 439820793433722622}
   - component: {fileID: 3231981177445785434}
   - component: {fileID: 1032179972447768097}
-  - component: {fileID: 6842119547519489657}
-  - component: {fileID: 6842119547519489658}
   m_Layer: 0
   m_Name: ViewCamera
   m_TagString: Untagged
@@ -21649,80 +21649,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &6842119547519489657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6842119547519489656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d353f47f283f7b546ac9ab70625dfeb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightColor: {r: 1, g: 1, b: 0.825, a: 0}
-  lightStrength: 1
-  lightRamps: 5
-  fadeStart: 0.4
-  fadeStrength: 0.33
-  directionalFading: 1
-  shadowStrength: 0.6
-  shadowRamps: 5
-  directionalDisappearance: 0.725
-  cloudAreaNearClipPlane: 5
-  cloudAreaFarClipPlane: 65
-  showCloudAreaInEditor: 1
-  shadowMarchStepSize: 0.18
-  shadowMarchSteps: 48
-  cloudDataResolution: 700
-  autoApplySettings: 1
-  _preComputedCloudTexture: {fileID: 0}
-  cloudDataTexture: {fileID: 0}
-  godrayMat: {fileID: 0}
-  cloudDataWriterMat: {fileID: 0}
-  mainCamera: {fileID: 0}
-  mainLightTrans: {fileID: 0}
-  anchorTrans: {fileID: 0}
-  planeOrigo: {x: 0, y: 0, z: 0}
-  cloudMovement: {x: 0, y: 0}
-  cloudStep: {x: 0, y: 0}
-  planeWidthWorldUnits: 0
-  planeHeightWorldUnits: 0
-  screenWidthWorldUnits: 0
-  screenHeightWorldUnits: 0
-  cloudCoverage: 0
-  cloudScale: 0
-  cloudChange: 0
-  dataWriterMultiplier: 2.7
-  dataWriterAdditive: 0
-  brightness: 0.25
---- !u!114 &6842119547519489658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6842119547519489656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4d51a812d712c649bdb962dd6a598d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cloudCoverage: 0.4
-  cloudScale: 0.025
-  cloudChange: 0.005
-  cloudMovement: {x: -0.25, y: 0.25}
-  cloudStep: {x: 13, y: 17}
-  shades: 3
-  cloudStrength: 1
-  brightness: -1
-  miminumDarkness: 0.2
-  Materials:
-  - {fileID: 2100000, guid: 2e28bfe2c8c74bb459978f7de36dd869, type: 2}
-  overrideMatValues: 1
-  cookieClouds: 0
-  additionalCookieSize: {x: 20, y: 20}
 --- !u!1 &6914777548189130156
 GameObject:
   m_ObjectHideFlags: 0
@@ -22628,7 +22554,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 457627716}
+  m_TargetTexture: {fileID: 481785376}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -22638,6 +22564,80 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &9205371886284785307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4231759118789197256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4d51a812d712c649bdb962dd6a598d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudCoverage: 0.3
+  cloudScale: 0.025
+  cloudChange: 0.005
+  cloudMovement: {x: -0.25, y: 0.25}
+  cloudStep: {x: 13, y: 17}
+  shades: 3
+  cloudStrength: 2
+  brightness: -1
+  miminumDarkness: 0.2
+  Materials:
+  - {fileID: 2100000, guid: 2e28bfe2c8c74bb459978f7de36dd869, type: 2}
+  overrideMatValues: 1
+  cookieClouds: 1
+  additionalCookieSize: {x: 20, y: 20}
+--- !u!114 &9205371886284785308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4231759118789197256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d353f47f283f7b546ac9ab70625dfeb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightColor: {r: 1, g: 1, b: 0.825, a: 0}
+  lightStrength: 1
+  lightRamps: 4
+  fadeStart: 0.4
+  fadeStrength: 0.33
+  directionalFading: 1
+  shadowStrength: 1
+  shadowRamps: 5
+  directionalDisappearance: 0.725
+  cloudAreaNearClipPlane: 5
+  cloudAreaFarClipPlane: 55
+  showCloudAreaInEditor: 1
+  shadowMarchStepSize: 0.33
+  shadowMarchSteps: 24
+  cloudDataResolution: 700
+  autoApplySettings: 1
+  _preComputedCloudTexture: {fileID: 0}
+  cloudDataTexture: {fileID: 0}
+  godrayMat: {fileID: 0}
+  cloudDataWriterMat: {fileID: 0}
+  mainCamera: {fileID: 0}
+  mainLightTrans: {fileID: 0}
+  anchorTrans: {fileID: 0}
+  planeOrigo: {x: 0, y: 0, z: 0}
+  cloudMovement: {x: 0, y: 0}
+  cloudStep: {x: 0, y: 0}
+  planeWidthWorldUnits: 0
+  planeHeightWorldUnits: 0
+  screenWidthWorldUnits: 0
+  screenHeightWorldUnits: 0
+  cloudCoverage: 0
+  cloudScale: 0
+  cloudChange: 0
+  dataWriterMultiplier: 2.7
+  dataWriterAdditive: 0
+  brightness: 0.25
 --- !u!4 &9222093337796850050
 Transform:
   m_ObjectHideFlags: 0
