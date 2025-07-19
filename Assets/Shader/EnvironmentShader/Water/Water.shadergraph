@@ -190,9 +190,6 @@
             "m_Id": "178359ebc22d4f279016e663ca16f59c"
         },
         {
-            "m_Id": "6fb80d5abfcb4bb8a3a95b0b6798c7ed"
-        },
-        {
             "m_Id": "9304ea8d6c28439f85aad7b1b42b76f3"
         },
         {
@@ -2715,21 +2712,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "51a4ed422a864e569306881e3b1dd9bc",
-    "m_Id": 1011614571,
-    "m_DisplayName": "Distance",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "_Distance",
-    "m_StageCapability": 2,
-    "m_Value": 0.0,
-    "m_DefaultValue": 0.0,
-    "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector2MaterialSlot",
     "m_ObjectId": "55001734a08d4f94ad95e0a4cd058a1f",
     "m_Id": 3,
@@ -2769,31 +2751,6 @@
     },
     "m_Labels": [],
     "m_Channel": 0
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
-    "m_ObjectId": "5b5e877844ce4cc696680b075d0022c3",
-    "m_Id": 1,
-    "m_DisplayName": "Out_Vector4",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "OutVector4",
-    "m_StageCapability": 2,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_Labels": []
 }
 
 {
@@ -3440,51 +3397,6 @@
         "y": 1.0
     },
     "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.SubGraphNode",
-    "m_ObjectId": "6fb80d5abfcb4bb8a3a95b0b6798c7ed",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "DepthFade",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": -1072.800048828125,
-            "y": 412.0000305175781,
-            "width": 211.99993896484376,
-            "height": 94.40005493164063
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "51a4ed422a864e569306881e3b1dd9bc"
-        },
-        {
-            "m_Id": "5b5e877844ce4cc696680b075d0022c3"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": false,
-    "m_DismissedVersion": 0,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_SerializedSubGraph": "{\n    \"subGraph\": {\n        \"fileID\": -5475051401550479605,\n        \"guid\": \"106d27b921e8a6e4c907d0a468ee192f\",\n        \"type\": 3\n    }\n}",
-    "m_PropertyGuids": [
-        "a7f92cf6-a2be-4709-af10-71a88c9dcd74"
-    ],
-    "m_PropertyIds": [
-        1011614571
-    ],
-    "m_Dropdowns": [],
-    "m_DropdownSelectedEntries": []
 }
 
 {
