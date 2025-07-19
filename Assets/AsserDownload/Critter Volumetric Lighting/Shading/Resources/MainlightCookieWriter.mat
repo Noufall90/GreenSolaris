@@ -128,7 +128,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Cookie_Position: {r: -2.4449549, g: -1.5144196, b: 4.6594887, a: 0}
+    - _Cookie_Position: {r: -6.9851437, g: -1.5339651, b: 26.595966, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
