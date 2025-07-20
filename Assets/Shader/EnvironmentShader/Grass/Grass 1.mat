@@ -12,18 +12,15 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHATEST_ON
   - _USETERRAINCOLOR
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
-  stringTagMap:
-    RenderType: TransparentCutout
+  stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
-  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -135,28 +132,29 @@ Material:
     - _SrcBlendAlpha: 1
     - _Strenght: -1
     - _Surface: 0
-    - _TerrainOffset: 0
-    - _TerrainSize: 100
+    - _TerrainOffset: 0.5
+    - _TerrainSize: 200
     - _USETERRAINCOLOR: 1
     - _WindHeigh: 0.01
     - _WindIntensity: 0.01
-    - _WindNoiseSpeed: 0
+    - _WindNoiseSpeed: 0.5
     - _WindSpeed: 0.1
-    - _WorkflowMode: 1
+    - _WorkflowMode: 0
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0
     m_Colors:
     - _Albedo: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BottomColor: {r: 0.2671627, g: 0.4478794, b: 0.5924529, a: 0}
+    - _BottomColor: {r: 0.15398358, g: 0.22106588, b: 0.3056603, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FarColor: {r: 0.29007208, g: 0.5698112, b: 0.22254884, a: 0}
-    - _NearColor: {r: 0.4484092, g: 1, b: 0.37547147, a: 0}
-    - _NearRange: {r: 19, g: 20, b: 0, a: 0}
+    - _FarColor: {r: 0.2627451, g: 0.64705884, b: 0.16078432, a: 0}
+    - _NearColor: {r: 0.54901963, g: 1, b: 0.49019608, a: 0}
+    - _NearRange: {r: 17, g: 18, b: 0, a: 0}
     - _ShadowColor: {r: 0.18076894, g: 0.19296603, b: 0.3433962, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _TerrainOff: {r: 0, g: 0, b: 0, a: 0}
     - _WindNoiseContras: {r: 0, g: 1, b: 0, a: 0}
     - _WindNoiseScale: {r: 10, g: 20, b: 0, a: 0}
   m_BuildTextureStacks: []
