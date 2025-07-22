@@ -86,8 +86,9 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RippleDensity: 10
-    - _RippleSlimness: 7.04
+    - _RippleDensity: 7
+    - _RippleFoam: 0.04
+    - _RippleSlimness: 10
     - _RippleSpeed: 3
     - _SrcBlend: 1
     - _Surface: 1
@@ -100,6 +101,6 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.23339976, g: 0.7401579, b: 0.8415094, a: 1}
     - _FoamColor: {r: 2.6418686, g: 3.6594577, b: 5.490943, a: 1}
-    - _RippleColor: {r: 1.4897045, g: 1.9521503, b: 2.3853276, a: 0.6666667}
+    - _RippleColor: {r: 1.1908668, g: 1.3484365, b: 1.4921027, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
