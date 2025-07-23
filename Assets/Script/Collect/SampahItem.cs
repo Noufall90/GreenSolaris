@@ -2,5 +2,6 @@ using UnityEngine;
 
 public class SampahItem : MonoBehaviour
 {
-    public string tipeSampah; // "Plastik", "Kayu", "Besi"
+    [Header("Tipe dan Berat Sampah")]
+    public string tipeSampah; 
 }
