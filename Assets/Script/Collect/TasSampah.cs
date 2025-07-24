@@ -1,15 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 using System.Collections.Generic;
 
 public class TasSampah : MonoBehaviour
 {
     public int kapasitasMaks = 5;
+
+    [Header("UI")]
     public Slider sliderUI;
     public TextMeshProUGUI teksNilaiUI;
+    public GameObject notifTasPenuhUI;
 
     private int totalBeratSekarang = 0;
+    private Coroutine notifCoroutine;
 
     private Dictionary<string, int> beratPerItem = new Dictionary<string, int>()
     {
@@ -20,6 +25,9 @@ public class TasSampah : MonoBehaviour
 
     private void Start()
     {
+        if (notifTasPenuhUI != null)
+            notifTasPenuhUI.SetActive(false);
+
         UpdateUI();
     }
 
@@ -58,5 +66,23 @@ public class TasSampah : MonoBehaviour
         {
             teksNilaiUI.text = $"{totalBeratSekarang} / {kapasitasMaks}";
         }
+    }
+
+    // Notifikasi tas penuh sementara
+    public void TampilkanNotifikasiSementara(float durasi)
+    {
+        if (notifTasPenuhUI == null) return;
+
+        if (notifCoroutine != null)
+            StopCoroutine(notifCoroutine);
+
+        notifCoroutine = StartCoroutine(TampilkanNotifikasiCoroutine(durasi));
+    }
+
+    private IEnumerator TampilkanNotifikasiCoroutine(float durasi)
+    {
+        notifTasPenuhUI.SetActive(true);
+        yield return new WaitForSeconds(durasi);
+        notifTasPenuhUI.SetActive(false);
     }
 }

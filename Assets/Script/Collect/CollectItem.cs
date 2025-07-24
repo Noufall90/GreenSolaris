@@ -32,22 +32,28 @@ public class CollectItem : MonoBehaviour
         {
             string tipe = currentSampah.tipeSampah;
 
-            if (tasSampah != null && tasSampah.BisaMenambah(tipe))
+            // Cek apakah bisa ditambah
+            if (tasSampah != null)
             {
-                tasSampah.TambahSampah(tipe);
-
-                if (sampahCounter.ContainsKey(tipe))
+                if (tasSampah.BisaMenambah(tipe))
                 {
-                    sampahCounter[tipe]++;
-                    UpdateUI();
-                }
+                    tasSampah.TambahSampah(tipe);
 
-                Destroy(currentSampah.gameObject);
-                currentSampah = null;
-            }
-            else
-            {
-                Debug.Log("Tidak bisa ambil, tas penuh.");
+                    if (sampahCounter.ContainsKey(tipe))
+                    {
+                        sampahCounter[tipe]++;
+                        UpdateUI();
+                    }
+
+                    Destroy(currentSampah.gameObject);
+                    currentSampah = null;
+                }
+                else
+                {
+                    // Penuh → Tampilkan notifikasi selama 2 detik
+                    tasSampah.TampilkanNotifikasiSementara(2f);
+                    Debug.Log("Tas penuh! Tidak bisa ambil.");
+                }
             }
         }
     }
