@@ -89,7 +89,7 @@ Material:
     - _RippleDensity: 7
     - _RippleFoam: 0.04
     - _RippleSlimness: 10
-    - _RippleSpeed: 3
+    - _RippleSpeed: 1.4
     - _SrcBlend: 1
     - _Surface: 1
     - _WaveScale: 0.5
