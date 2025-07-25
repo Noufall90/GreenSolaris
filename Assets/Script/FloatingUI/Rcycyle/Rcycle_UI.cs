@@ -10,6 +10,8 @@ public class Rcycle_UI : MonoBehaviour
 
     private bool isPlayerInside = false;
     private bool isPanelOpen = false;
+    public GameObject player; // drag player ke sini di inspector
+
 
     void Start()
     {

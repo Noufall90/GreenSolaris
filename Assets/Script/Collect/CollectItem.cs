@@ -93,4 +93,13 @@ public class CollectItem : MonoBehaviour
         sampahCounter["Besi"] = 0;
         UpdateUI();
     }
+    public void KurangiSampah(string tipe, int jumlah)
+    {
+        if (sampahCounter.ContainsKey(tipe))
+        {
+            sampahCounter[tipe] = Mathf.Max(0, sampahCounter[tipe] - jumlah);
+            UpdateUI();
+        }
+    }
+
 }

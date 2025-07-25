@@ -78,6 +78,15 @@ public class TasSampah : MonoBehaviour
 
         notifCoroutine = StartCoroutine(TampilkanNotifikasiCoroutine(durasi));
     }
+    public void KurangiBerat(string tipe, int jumlah)
+    {
+        if (!beratPerItem.ContainsKey(tipe)) return;
+
+        int total = beratPerItem[tipe] * jumlah;
+        totalBeratSekarang = Mathf.Max(0, totalBeratSekarang - total);
+        UpdateUI();
+    }
+
 
     private IEnumerator TampilkanNotifikasiCoroutine(float durasi)
     {
