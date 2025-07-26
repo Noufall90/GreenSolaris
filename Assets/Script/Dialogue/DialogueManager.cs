@@ -10,13 +10,17 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI characterName;
     public TextMeshProUGUI fontUtama;
     public TextMeshProUGUI fontEmoji;
+    public GameObject dialogBox;
 
     private Queue<DialogueLine> lines;
+    private DialogueLine currentLine;
+    private TextMeshProUGUI activeFont;
+    private string fullSentence;
+    private Coroutine typingCoroutine;
 
     public bool isDialogueActive = false;
+    private bool isTyping = false;
     public float typingSpeed = 0.02f;
-
-    public Animator animator;
 
     private void Awake()
     {
@@ -24,22 +28,33 @@ public class DialogueManager : MonoBehaviour
             Instance = this;
 
         lines = new Queue<DialogueLine>();
+
+        if (dialogBox != null)
+            dialogBox.SetActive(false);
     }
 
     private void Update()
     {
         if (isDialogueActive && Input.GetKeyDown(KeyCode.R))
         {
-            DisplayNextDialogueLine();
+            if (isTyping)
+            {
+                // Langsung tampilkan seluruh kalimat
+                ShowFullSentence();
+            }
+            else
+            {
+                // Lanjut ke dialog berikutnya
+                DisplayNextDialogueLine();
+            }
         }
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         isDialogueActive = true;
-        animator.Play("show");
-
         lines.Clear();
+        dialogBox.SetActive(true);
 
         foreach (DialogueLine dialogueLine in dialogue.dialogueLines)
         {
@@ -57,11 +72,13 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        DialogueLine currentLine = lines.Dequeue();
+        currentLine = lines.Dequeue();
         characterName.text = currentLine.character.name;
 
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(currentLine));
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        typingCoroutine = StartCoroutine(TypeSentence(currentLine));
     }
 
     IEnumerator TypeSentence(DialogueLine dialogueLine)
@@ -69,33 +86,58 @@ public class DialogueManager : MonoBehaviour
         fontUtama.gameObject.SetActive(false);
         fontEmoji.gameObject.SetActive(false);
 
-        TextMeshProUGUI activeFont = null;
+        isTyping = true;
 
-        if (dialogueLine.utama_Dialogue)
+        if (dialogueLine.utama_Dialogue && !dialogueLine.emoji_Dialogue)
+        {
             activeFont = fontUtama;
-        else if (dialogueLine.emoji_Dialogue)
+        }
+        else if (!dialogueLine.utama_Dialogue && dialogueLine.emoji_Dialogue)
+        {
             activeFont = fontEmoji;
+        }
+        else if (dialogueLine.utama_Dialogue && dialogueLine.emoji_Dialogue)
+        {
+            Debug.LogWarning("Dua font dipilih, gunakan font utama sebagai default.");
+            activeFont = fontUtama;
+        }
         else
         {
-            Debug.LogWarning("Tidak ada font yang dipilih di DialogueLine.");
-            yield break;
+            Debug.LogWarning("Tidak ada font dipilih, gunakan font utama sebagai default.");
+            activeFont = fontUtama;
         }
 
         activeFont.gameObject.SetActive(true);
         activeFont.text = "";
+        fullSentence = dialogueLine.line;
 
-        foreach (char letter in dialogueLine.line.ToCharArray())
+        foreach (char letter in fullSentence)
         {
             activeFont.text += letter;
             yield return new WaitForSeconds(typingSpeed);
+        }
+
+        isTyping = false;
+    }
+
+    void ShowFullSentence()
+    {
+        if (activeFont != null)
+        {
+            if (typingCoroutine != null)
+                StopCoroutine(typingCoroutine);
+
+            activeFont.text = fullSentence;
+            isTyping = false;
         }
     }
 
     void EndDialogue()
     {
         isDialogueActive = false;
-        animator.Play("hide");
-        fontUtama.text = "";
-        fontEmoji.text = "";
+        fontUtama.gameObject.SetActive(false);
+        fontEmoji.gameObject.SetActive(false);
+        characterName.text = "";
+        dialogBox.SetActive(false);
     }
 }

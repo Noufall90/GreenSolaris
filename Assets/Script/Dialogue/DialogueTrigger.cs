@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class DialogueCharacter
@@ -11,8 +11,13 @@ public class DialogueCharacter
 public class DialogueLine
 {
     public DialogueCharacter character;
+
+    [Tooltip("Centang jika ini adalah dialog utama (text biasa)")]
     public bool utama_Dialogue;
+
+    [Tooltip("Centang jika ini adalah dialog emoji")]
     public bool emoji_Dialogue;
+
     [TextArea(3, 10)]
     public string line;
 }
@@ -27,16 +32,49 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
 
-    public void TriggerDialogue()
+    private bool playerInRange = false;
+    private bool dialogueStarted = false;
+
+    private Renderer quadRenderer;
+
+    private void Start()
     {
-        DialogueManager.Instance.StartDialogue(dialogue);
+        quadRenderer = GetComponent<Renderer>();
+        if (quadRenderer != null)
+            quadRenderer.enabled = false;
+    }
+
+    private void Update()
+    {
+        if (playerInRange && !dialogueStarted && Input.GetKeyDown(KeyCode.F))
+        {
+            DialogueManager.Instance.StartDialogue(dialogue);
+            dialogueStarted = true;
+        }
+
+        if (dialogueStarted && !DialogueManager.Instance.isDialogueActive)
+        {
+            dialogueStarted = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            TriggerDialogue();
+            playerInRange = true;
+            if (quadRenderer != null)
+                quadRenderer.enabled = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
+            if (quadRenderer != null)
+                quadRenderer.enabled = false;
         }
     }
 }
