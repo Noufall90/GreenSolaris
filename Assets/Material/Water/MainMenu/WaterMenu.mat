@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Water
+  m_Name: WaterMenu
   m_Shader: {fileID: -6465566751694194690, guid: fce1497e4e50cbf43b3831f6820d204d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -86,13 +86,13 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RippleDensity: 7
+    - _RippleDensity: 10
     - _RippleFoam: 0.04
     - _RippleSlimness: 10
     - _RippleSpeed: 1.4
     - _SrcBlend: 1
     - _Surface: 1
-    - _WaveScale: 0.5
+    - _WaveScale: 0
     - _WaveSpeed: 1
     - _WorkflowMode: 1
     - _ZTest: 4
