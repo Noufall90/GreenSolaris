@@ -1,29 +1,25 @@
 using UnityEngine;
-
+ 
 [System.Serializable]
 public struct MusicTrack
 {
     public string trackName;
     public AudioClip clip;
 }
-
-namespace DS
+ 
+public class MusicLibrary : MonoBehaviour
 {
-
-    public class MusicLibrary : MonoBehaviour
+    public MusicTrack[] tracks;
+ 
+    public AudioClip GetClipFromName(string trackName)
     {
-        public MusicTrack[] tracks;
-
-        public AudioClip GetClipFromName(string trackName)
+        foreach (var track in tracks)
         {
-            foreach (var track in tracks)
+            if (track.trackName == trackName)
             {
-                if (track.trackName == trackName)
-                {
-                    return track.clip;
-                }
+                return track.clip;
             }
-            return null;
         }
+        return null;
     }
 }

@@ -92,8 +92,8 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cloud_Change: 0.005
     - _Cloud_Cover: 0.2
-    - _Cloud_Density: 0.02
-    - _Cloud_Strength: 2
+    - _Cloud_Density: 0.055
+    - _Cloud_Strength: 1.5
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1

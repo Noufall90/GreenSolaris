@@ -1,7 +1,6 @@
 using UnityEngine;
 
-namespace DS
-{
+
     public class SoundManager : MonoBehaviour
     {
          public static SoundManager Instance;
@@ -42,4 +41,4 @@ namespace DS
             sfx2DSource.PlayOneShot(sfxLibrary.GetClipFromName(soundName));
         }
     }
-}
+

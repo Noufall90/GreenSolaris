@@ -28,9 +28,6 @@
             "m_Id": "a71d6c78ee29435d844d207c83b134e6"
         },
         {
-            "m_Id": "c097dbc66e4249f8b7d807c8d9f0e305"
-        },
-        {
             "m_Id": "efab78838ab148f9919c894ff538e81b"
         },
         {
@@ -59,6 +56,9 @@
         },
         {
             "m_Id": "d4f82e29bcd94427a9a64140e0c22bae"
+        },
+        {
+            "m_Id": "b11b62d155154eed9f8fae424807d0b4"
         }
     ],
     "m_Keywords": [
@@ -174,9 +174,6 @@
         },
         {
             "m_Id": "8f80852f3aa7431abf62d65c4ca8677f"
-        },
-        {
-            "m_Id": "34b5ac751e2542a0a4ee7277d3734c99"
         },
         {
             "m_Id": "e97855afbbf046a4a10a8c4bf4ba22e5"
@@ -2308,8 +2305,8 @@
     "m_ObjectId": "1029431d37714f028361c74d3f074bc0",
     "m_Title": "HighBlend",
     "m_Position": {
-        "x": -2591.19970703125,
-        "y": 111.2000961303711
+        "x": -2591.199951171875,
+        "y": 111.199951171875
     }
 }
 
@@ -4183,42 +4180,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
-    "m_ObjectId": "34b5ac751e2542a0a4ee7277d3734c99",
-    "m_Group": {
-        "m_Id": "3b7ef36d27784788a7b16eb4ddecdca0"
-    },
-    "m_Name": "Property",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": -2497.600341796875,
-            "y": 1274.4000244140625,
-            "width": 143.199951171875,
-            "height": 33.60009765625
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "a01e9084cd2840b3b5544225e38f382d"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_DismissedVersion": 0,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_Property": {
-        "m_Id": "c097dbc66e4249f8b7d807c8d9f0e305"
-    }
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "3554d895c341496fbf6bd267cbdce787",
     "m_Id": 2,
@@ -4553,7 +4514,7 @@
     "m_ObjectId": "3b7ef36d27784788a7b16eb4ddecdca0",
     "m_Title": "TerrainColor",
     "m_Position": {
-        "x": -3147.19970703125,
+        "x": -3147.199951171875,
         "y": 966.39990234375
     }
 }
@@ -5151,7 +5112,7 @@
     "m_ObjectId": "5817dcbca55f42ad97c188a562d85314",
     "m_Title": "Shadow",
     "m_Position": {
-        "x": -2825.599853515625,
+        "x": -2825.60009765625,
         "y": 611.199951171875
     }
 }
@@ -6199,8 +6160,8 @@
     "m_ObjectId": "7612f895ba5a43ea8b833bf1818d3970",
     "m_Title": "WindNoise",
     "m_Position": {
-        "x": -3398.39990234375,
-        "y": -935.1998291015625
+        "x": -3398.400146484375,
+        "y": -935.2000122070313
     }
 }
 
@@ -6450,7 +6411,7 @@
             "m_Id": "4e3bca64d3d74a1bba6ab9d34e211406"
         },
         {
-            "m_Id": "c097dbc66e4249f8b7d807c8d9f0e305"
+            "m_Id": "b11b62d155154eed9f8fae424807d0b4"
         },
         {
             "m_Id": "d4f82e29bcd94427a9a64140e0c22bae"
@@ -7769,21 +7730,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "a01e9084cd2840b3b5544225e38f382d",
-    "m_Id": 0,
-    "m_DisplayName": "TerrainOffset",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Out",
-    "m_StageCapability": 3,
-    "m_Value": 0.0,
-    "m_DefaultValue": 0.0,
-    "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicValueMaterialSlot",
     "m_ObjectId": "a519c5ce83374153b09e74c72e4a12c8",
     "m_Id": 2,
@@ -8079,6 +8025,34 @@
 }
 
 {
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "b11b62d155154eed9f8fae424807d0b4",
+    "m_Guid": {
+        "m_GuidSerialized": "ba6edfc5-8d86-4fbe-8b04-71e7fb698a41"
+    },
+    "m_Name": "TerrainOffset",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "TerrainOffset",
+    "m_DefaultReferenceName": "_TerrainOffset",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.BlockNode",
     "m_ObjectId": "b1633730d8584e89850b74079d471736",
@@ -8245,8 +8219,8 @@
     "m_ObjectId": "b679a58ff08b41a8ba48a681b629c7af",
     "m_Title": "Grassy",
     "m_Position": {
-        "x": -3380.0,
-        "y": -1509.599853515625
+        "x": -3380.000244140625,
+        "y": -1509.600341796875
     }
 }
 
@@ -8625,34 +8599,6 @@
 }
 
 {
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
-    "m_ObjectId": "c097dbc66e4249f8b7d807c8d9f0e305",
-    "m_Guid": {
-        "m_GuidSerialized": "9ba842c1-f78d-4b34-926a-e03ab78b0e31"
-    },
-    "m_Name": "TerrainOffset",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "TerrainOffset",
-    "m_DefaultReferenceName": "_TerrainOffset",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": 0.0,
-    "m_FloatType": 0,
-    "m_RangeValues": {
-        "x": 0.0,
-        "y": 1.0
-    }
-}
-
-{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.AddNode",
     "m_ObjectId": "c237b4f2793f4ed094d8b164d368b651",
@@ -8932,8 +8878,8 @@
     "m_ObjectId": "c81d6b0c368d4e57a8b0c5945b42bae1",
     "m_Title": "Depth",
     "m_Position": {
-        "x": -2900.0,
-        "y": -285.5998840332031
+        "x": -2900.000244140625,
+        "y": -285.60003662109377
     }
 }
 

@@ -7,8 +7,6 @@ public struct SoundEffect
     public AudioClip[] clips;
 }
 
-namespace DS
-{
     public class SoundLibrary : MonoBehaviour
     {
         public SoundEffect[] soundEffects;
@@ -25,4 +23,4 @@ namespace DS
             return null;
         }
     }
-}
+
