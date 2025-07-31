@@ -21,6 +21,8 @@ public class DialogueManager : MonoBehaviour
     public bool isDialogueActive = false;
     private bool isTyping = false;
     public float typingSpeed = 0.02f;
+    public Animator npcAnimator;
+
 
     private void Awake()
     {
@@ -56,6 +58,10 @@ public class DialogueManager : MonoBehaviour
         lines.Clear();
         dialogBox.SetActive(true);
 
+        // Aktifkan animasi berbicara
+        if (npcAnimator != null)
+            npcAnimator.SetBool("Talking", true);
+
         foreach (DialogueLine dialogueLine in dialogue.dialogueLines)
         {
             lines.Enqueue(dialogueLine);
@@ -63,6 +69,7 @@ public class DialogueManager : MonoBehaviour
 
         DisplayNextDialogueLine();
     }
+
 
     public void DisplayNextDialogueLine()
     {
@@ -139,5 +146,9 @@ public class DialogueManager : MonoBehaviour
         fontEmoji.gameObject.SetActive(false);
         characterName.text = "";
         dialogBox.SetActive(false);
+
+        // Kembali ke idle
+        if (npcAnimator != null)
+            npcAnimator.SetBool("Talking", false);
     }
 }

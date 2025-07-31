@@ -35,10 +35,10 @@ public class PlayerCamera : MonoBehaviour
 
     private void HandleRotationInput()
     {
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.E))
             currentAngle -= rotationSpeed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.Q))
             currentAngle += rotationSpeed * Time.deltaTime;
     }
 }

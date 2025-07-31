@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 public class CollectItem : MonoBehaviour
 {
+    [Header("Animasi")]
+    public Animator playerAnimator; // Drag animator pemain ke sini
+
     [Header("UI References")]
     public TextMeshProUGUI plastikText;
     public TextMeshProUGUI kayuText;
@@ -32,7 +35,6 @@ public class CollectItem : MonoBehaviour
         {
             string tipe = currentSampah.tipeSampah;
 
-            // Cek apakah bisa ditambah
             if (tasSampah != null)
             {
                 if (tasSampah.BisaMenambah(tipe))
@@ -45,18 +47,21 @@ public class CollectItem : MonoBehaviour
                         UpdateUI();
                     }
 
+                    if (playerAnimator != null)
+                        playerAnimator.SetTrigger("TakingItem");
+
                     Destroy(currentSampah.gameObject);
                     currentSampah = null;
                 }
                 else
                 {
-                    // Penuh → Tampilkan notifikasi selama 2 detik
                     tasSampah.TampilkanNotifikasiSementara(2f);
                     Debug.Log("Tas penuh! Tidak bisa ambil.");
                 }
             }
         }
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
