@@ -31,19 +31,18 @@ public class Dialogue
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
+
     private bool playerInRange = false;
     private bool dialogueStarted = false;
 
     private Renderer quadRenderer;
-    private Animator animator; 
+    public Animator npcAnimator; 
 
     private void Start()
     {
         quadRenderer = GetComponent<Renderer>();
         if (quadRenderer != null)
             quadRenderer.enabled = false;
-
-        animator = GetComponent<Animator>(); // Inisialisasi animator
     }
 
     private void Update()
@@ -53,17 +52,18 @@ public class DialogueTrigger : MonoBehaviour
             DialogueManager.Instance.StartDialogue(dialogue);
             dialogueStarted = true;
 
-            if (animator != null)
-                animator.SetBool("Talking", true); // Mulai animasi talking
+            // ✅ Mulai animasi bicara
+            if (npcAnimator != null)
+                npcAnimator.SetBool("Talking", true);
         }
 
-        // Kembali ke idle jika dialog selesai
         if (dialogueStarted && !DialogueManager.Instance.isDialogueActive)
         {
             dialogueStarted = false;
 
-            if (animator != null)
-                animator.SetBool("Talking", false); // Kembali ke idle
+            // ✅ Kembali ke idle
+            if (npcAnimator != null)
+                npcAnimator.SetBool("Talking", false);
         }
     }
 

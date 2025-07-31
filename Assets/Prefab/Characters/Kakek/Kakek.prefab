@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4794745032102180986}
-  - component: {fileID: 5274274303830552989}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -33,25 +32,6 @@ Transform:
   - {fileID: 4387628803487304030}
   m_Father: {fileID: 7588817072067654575}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5274274303830552989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357855904829646846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7322f2b70a62baf40ad1fbb494cbc6f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterName: {fileID: 0}
-  fontUtama: {fileID: 0}
-  fontEmoji: {fileID: 0}
-  dialogBox: {fileID: 0}
-  isDialogueActive: 0
-  typingSpeed: 0.1
-  npcAnimator: {fileID: 739049247258330791}
 --- !u!1 &2141887969317719485
 GameObject:
   m_ObjectHideFlags: 0
