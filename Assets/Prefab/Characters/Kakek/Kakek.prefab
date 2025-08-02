@@ -261,6 +261,7 @@ MonoBehaviour:
       utama_Dialogue: 0
       emoji_Dialogue: 1
       line: k
+  npcAnimator: {fileID: 0}
 --- !u!1 &7589546496084275977
 GameObject:
   m_ObjectHideFlags: 0

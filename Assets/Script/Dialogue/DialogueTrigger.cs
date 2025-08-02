@@ -51,8 +51,9 @@ public class DialogueTrigger : MonoBehaviour
         {
             DialogueManager.Instance.StartDialogue(dialogue);
             dialogueStarted = true;
+            SoundManager.Instance.PlaySound2D("Dialogue");
+            SoundManager.Instance.PlaySound2D("SuaraNPC");
 
-            // ✅ Mulai animasi bicara
             if (npcAnimator != null)
                 npcAnimator.SetBool("Talking", true);
         }
@@ -61,7 +62,6 @@ public class DialogueTrigger : MonoBehaviour
         {
             dialogueStarted = false;
 
-            // ✅ Kembali ke idle
             if (npcAnimator != null)
                 npcAnimator.SetBool("Talking", false);
         }
@@ -86,4 +86,4 @@ public class DialogueTrigger : MonoBehaviour
                 quadRenderer.enabled = false;
         }
     }
-}
+} 

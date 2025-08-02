@@ -38,14 +38,13 @@ public class DialogueManager : MonoBehaviour
     {
         if (isDialogueActive && Input.GetKeyDown(KeyCode.R))
         {
+            SoundManager.Instance.PlaySound2D("Dialogue");
             if (isTyping)
             {
-                // Langsung tampilkan seluruh kalimat
                 ShowFullSentence();
             }
             else
             {
-                // Lanjut ke dialog berikutnya
                 DisplayNextDialogueLine();
             }
         }

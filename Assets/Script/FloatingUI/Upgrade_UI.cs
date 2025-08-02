@@ -30,6 +30,7 @@ public class Upgrade_UI : MonoBehaviour
     {
         if (isPlayerInside && Input.GetKeyDown(KeyCode.F))
         {
+            SoundManager.Instance.PlaySound2D("Upgrade");
             OpenPanel();
         }
 
@@ -75,6 +76,7 @@ public class Upgrade_UI : MonoBehaviour
 
     public void ClosePanel()
     {
+        SoundManager.Instance.PlaySound2D("Button");
         if (upgradePanel == null) return;
 
         upgradePanel.SetActive(false);

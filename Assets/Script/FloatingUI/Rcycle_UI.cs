@@ -30,11 +30,13 @@ public class Rcycle_UI : MonoBehaviour
     {
         if (isPlayerInside && Input.GetKeyDown(KeyCode.F))
         {
+            SoundManager.Instance.PlaySound2D("Rcycle");
             OpenPanel();
         }
 
         if (isPanelOpen && Input.GetKeyDown(KeyCode.Escape))
         {
+            SoundManager.Instance.PlaySound2D("Button");
             ClosePanel();
         }
     }
@@ -75,13 +77,13 @@ public class Rcycle_UI : MonoBehaviour
 
     public void ClosePanel()
     {
+        SoundManager.Instance.PlaySound2D("Button");
         if (rcyclePanel == null) return;
 
         rcyclePanel.SetActive(false);
         isPanelOpen = false;
         Time.timeScale = 1f;
 
-        // Jika player masih di area, tampilkan kembali quadRenderer
         if (isPlayerInside && quadRenderer != null)
             quadRenderer.enabled = true;
     }

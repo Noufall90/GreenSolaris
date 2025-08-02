@@ -71,6 +71,7 @@ public class TasSampah : MonoBehaviour
     // Notifikasi tas penuh sementara
     public void TampilkanNotifikasiSementara(float durasi)
     {
+        SoundManager.Instance.PlaySound2D("Notif");
         if (notifTasPenuhUI == null) return;
 
         if (notifCoroutine != null)

@@ -34,6 +34,7 @@ public class Pause : MonoBehaviour
 
     public void OnPauseButtonPressed()
     {
+        SoundManager.Instance.PlaySound2D("Button");
         if (!isPaused)
         {
             PauseGame();
@@ -41,7 +42,8 @@ public class Pause : MonoBehaviour
     }
 
     public void PauseGame()
-    {
+    {   
+        SoundManager.Instance.PlaySound2D("Button");
         isPaused = true;
         Time.timeScale = 0f;
 
@@ -52,11 +54,11 @@ public class Pause : MonoBehaviour
         bantuanPanel.SetActive(false);
         controlPanel.SetActive(false);
 
-        SetCursorState(true);
     }
 
     public void ResumeGame()
-    {
+    {   
+        SoundManager.Instance.PlaySound2D("Button");        
         isPaused = false;
         Time.timeScale = 1f;
 
@@ -64,18 +66,18 @@ public class Pause : MonoBehaviour
         settingsPanel.SetActive(false);
         bantuanPanel.SetActive(false);
         controlPanel.SetActive(false);
-
-        SetCursorState(false);
     }
 
     public void OpenSettings()
     {
+        SoundManager.Instance.PlaySound2D("Button");
         pausePanel.SetActive(false);
         settingsPanel.SetActive(true);
     }
 
     public void OpenBantuan()
     {
+        SoundManager.Instance.PlaySound2D("Button");
         settingsPanel.SetActive(false);
         controlPanel.SetActive(false);
         pausePanel.SetActive(false);
@@ -83,26 +85,18 @@ public class Pause : MonoBehaviour
     }
 
     public void OpenControl()
-    {
+    {   
+        SoundManager.Instance.PlaySound2D("Button");
         settingsPanel.SetActive(false);
         controlPanel.SetActive(true);
     }
 
     public void BackToPause()
-    {
+    {   
+        SoundManager.Instance.PlaySound2D("Button");
         settingsPanel.SetActive(false);
         bantuanPanel.SetActive(false);
         controlPanel.SetActive(false);
         pausePanel.SetActive(true);
-    }
-
-    private void SetCursorState(bool showCursor)
-    {
-#if UNITY_EDITOR
-        Cursor.lockState = showCursor ? CursorLockMode.None : CursorLockMode.None;
-#else
-        Cursor.lockState = showCursor ? CursorLockMode.None : CursorLockMode.Locked;
-#endif
-        Cursor.visible = showCursor;
     }
 }

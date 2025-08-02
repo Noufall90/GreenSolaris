@@ -33,6 +33,7 @@ public class CollectItem : MonoBehaviour
     {
         if (currentSampah != null && Input.GetKeyDown(KeyCode.F))
         {
+            SoundManager.Instance.PlaySound2D("Pickup");
             string tipe = currentSampah.tipeSampah;
 
             if (tasSampah != null)

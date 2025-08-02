@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: 1769195768531941211}
   - component: {fileID: 4082880970427972733}
   - component: {fileID: 4422732316538358211}
+  - component: {fileID: 5441637128157359388}
   m_Layer: 0
   m_Name: Solya
   m_TagString: Player
@@ -458,6 +459,20 @@ MonoBehaviour:
     <StepReachForce>k__BackingField: 25
   <TriggerColliderData>k__BackingField:
     <GroundCheckCollider>k__BackingField: {fileID: 1712089586868707408}
+--- !u!114 &5441637128157359388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8138324430608251629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868673e6a25043b42a6144e001f86b9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSoundName: Walk
+  stepInterval: 0.5
 --- !u!1001 &5312254685783309046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1061,6 +1076,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -4728426434207774260, guid: 52e586a6fa839494a99d239cdd395f4e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6125294662673266154}
+    - targetCorrespondingSourceObject: {fileID: -1781356600409242780, guid: 52e586a6fa839494a99d239cdd395f4e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 803260135203008574}
     - targetCorrespondingSourceObject: {fileID: -9070493210130169274, guid: 52e586a6fa839494a99d239cdd395f4e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1888931096409229715}
@@ -1127,6 +1145,34 @@ CapsuleCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &4007956750194688303 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1781356600409242780, guid: 52e586a6fa839494a99d239cdd395f4e, type: 3}
+  m_PrefabInstance: {fileID: 5825484122196574795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &803260135203008574
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4007956750194688303}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
